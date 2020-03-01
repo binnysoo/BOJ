@@ -38,9 +38,9 @@ int calculator(int N, int *my_array) {
 	int newN = N;
 	int oldCalCount = MAX_NUM;
 
-	if (my_array[N] != MAX_NUM)							// N¿¡ ´ëÇÏ¿© ÀúÀåµÈ È½¼ö°¡ ÀÖÀ¸¸é °ª ¹İÈ¯
+	if (my_array[N] != MAX_NUM)							// Nì— ëŒ€í•˜ì—¬ ì €ì¥ëœ íšŸìˆ˜ê°€ ìˆìœ¼ë©´ ê°’ ë°˜í™˜
 		return my_array[N];
-	else {												// N¿¡ ´ëÇÏ¿© ÀúÀåµÈ È½¼ö°¡ ¾øÀ¸¸é	
+	else {												// Nì— ëŒ€í•˜ì—¬ ì €ì¥ëœ íšŸìˆ˜ê°€ ì—†ìœ¼ë©´	
 
 		if (N % 6 == 0) {
 			if (my_array[N / 2] == MAX_NUM)
@@ -78,11 +78,11 @@ int calculator(int N, int *my_array) {
 int main() {
 
 	int N, calCount;
-	int *calMap = (int *)malloc(sizeof(int)*MAX_SIZE);				// ÁÖ¾îÁø N¿¡ ´ëÇÏ¿© 1À» ¸¸µé±â À§ÇØ ÇÊ¿äÇÑ ÃÖ¼Ò ¿¬»êÀÇ È½¼ö ÀúÀå
+	int *calMap = (int *)malloc(sizeof(int)*MAX_SIZE);				// ì£¼ì–´ì§„ Nì— ëŒ€í•˜ì—¬ 1ì„ ë§Œë“¤ê¸° ìœ„í•´ í•„ìš”í•œ ìµœì†Œ ì—°ì‚°ì˜ íšŸìˆ˜ ì €ì¥
 
 	init(calMap);													// initiate
 
-	scanf("%d", &N);												// ÀÔ·ÂµÈ N°ª ÀúÀå, 1 <= N <= 10^6
+	scanf("%d", &N);												// ì…ë ¥ëœ Nê°’ ì €ì¥, 1 <= N <= 10^6
 	calCount = calculator(N, calMap);
 	printf("%d", calCount);
 
